@@ -1,0 +1,78 @@
+.Ecodiv {
+  height: 700px;
+  display: flex;
+  max-width: 100%;
+  position: relative;
+}
+.item {
+  height: 100%;
+  width: 50%;
+}
+.item1 {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+.item1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 50px -50px 50px rgb(0, 0, 0);
+}
+.EcoImgContent {
+  position: absolute;
+  left: 0;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  height: 30%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.857)
+  );
+}
+.EcoImgType {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  position: absolute;
+  color: white;
+ left: 40px;
+ top: 130px;
+}
+.EcoImgTitle {
+  position: absolute;
+  top: 160px;
+  left: 40px;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+.EcoImgView{
+    position: absolute;
+  font-size: 1.1rem;
+  position: absolute;
+  color: white;
+  top: 150px;
+  left: 800px;
+ cursor: pointer;
+}
+.EcoImgView:hover{
+    border-bottom: 1px solid white;
+}
+.item2 {
+    background-color: #FCF8F3;
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.EcobookBtn{
+    margin: 60px 0 0 0;
+    background-color: #FCF8F3;
+    color: black;
+}
+.EcobookBtn:hover{
+  background-color: #212806;
+  color: white;
+  transition: 0.5s;
+}

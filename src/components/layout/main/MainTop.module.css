@@ -1,0 +1,60 @@
+.mainTopdiv {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  margin-bottom: 100px;
+}
+.mainTopimg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  position: absolute;
+}
+.mainimgcontent {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  width: 46%;
+}
+.headingTitle {
+  font-size: 1em;
+  color: #211103;
+  font-family: Arial;
+  font-weight: lighter;
+}
+.heading {
+  font-family: Times;
+  font-weight: lighter;
+  font-size: 4em;
+  color: #211103;
+  padding-bottom: 50px;
+}
+.mainShopnow {
+  padding: 0.5em 1.5em 0.6em;
+  align-items: center;
+  border: 1px solid #212806;
+  border-radius: 40px;
+  background-color: #211103;
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  cursor: pointer;
+}
+.reviewsbox {
+  position: absolute;
+  left: 15%;
+  bottom: -2em;
+  width: 70%;
+  padding: 1.5em 15em;
+  background-color: #f5eee6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  font-family: Arial;
+  font-weight: bold;
+  color: #211103be;
+  background-color: #FDE8E9;
+  
+}
+

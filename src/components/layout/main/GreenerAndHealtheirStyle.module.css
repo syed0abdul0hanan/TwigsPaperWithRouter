@@ -1,0 +1,65 @@
+.container {
+  margin: 0 80px 0 100px;
+  height: 600px;
+}
+.GreenerTitle {
+  text-align: center;
+}
+.GreenerItemsDiv {
+  display: flex;
+}
+.items {
+  height: 18rem;
+  width: 24%;
+  padding: 1em 0.8em;
+}
+.item1 {
+  background-color: #b48d62;
+}
+.item2 {
+  background-color: #8e9373;
+}
+.item3 {
+  background-color: #b99c7e;
+}
+.item4 {
+  background-color: #424928;
+}
+.cardType {
+  color: rgba(255, 255, 255, 0.479);
+  font-size: 0.8rem;
+  margin: 10px;
+  font-weight: 600;
+}
+.cardTitle {
+  padding: 0 0.2em 1em 0.5rem;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.427) ;
+}
+.cardNumbers {
+  color: white;
+  margin: 10px;
+  text-align: right;
+  font-size: 3rem;
+  padding: 2rem 0 0 0 ;
+}
+.buttondiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin: 70px 0 100px 0 ;
+}
+button{
+    background-color: #212806;
+    padding: 0.5em 1.5em;
+    border-radius: 40px;
+    font-size: 1em;
+    color: white;
+    border-color:  1px solid black;
+    text-decoration: none;
+    cursor: pointer;
+}

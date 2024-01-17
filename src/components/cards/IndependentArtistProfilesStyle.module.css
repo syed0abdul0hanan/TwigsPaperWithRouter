@@ -1,0 +1,37 @@
+.IndependentArtistProfilesContainer {
+    display: flex;
+    height: 28rem;
+    width: auto;
+    margin:  0 1rem;
+  }
+  
+  .IndependentArtistProfile {
+      padding: 20px;
+    height: 23rem;
+    width: 43rem;
+    border-radius: 0.8rem;
+    border: 1px solid #b1b1a1;
+  }
+  .IndependentArtistInfoContainer {
+      height: 30%;
+    display: flex;
+    gap: 18rem;
+    align-items: center;
+    margin: 0 0 2rem 0;
+  }
+  .IndependentArtistInfo {
+    display: flex;
+    align-items: center;
+    width: 15rem;
+  }
+  .IndependentArtistInfo h3{
+  font-weight: lighter;
+  font-size: 1.5rem;
+  }
+  .IndependentArtistInfo img {
+    border-radius: 50%;
+    height: 6rem;
+  }
+  .IndependentArtistItemsContainer{
+      display: flex;
+  }

@@ -1,0 +1,21 @@
+.ArticleSectionContainer {
+  display: flex;
+  padding: 1rem 15rem;
+}
+ .ArticleSectionDiv {
+    width: 50%;
+} 
+.ArticleSectionContent{
+  padding: 0 5rem;
+}
+.ArticleSectionDiv img{
+    height: 46rem;
+}
+.ArticleSectionDiv button{
+  margin: 5rem 0;
+}
+.ArticleSectionDiv p{
+  /* font-size: 1.1rem; */
+  line-height: 200%;
+  color: #49111C;
+}
