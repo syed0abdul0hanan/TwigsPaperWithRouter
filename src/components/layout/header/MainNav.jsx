@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "../../../assets/twigs-paper.webp";
 import MainNavStyle from "./MainNavStyle.module.css";
 import UserIcon from "../../../assets/user-icon.png";
 import SearchIcon from "../../../assets/search-icon.png";
 import BuyCart from "../../../assets/buy-cart.png";
 import { Link } from "react-router-dom";
+import AuthContext from "../../../store/context/auth-context";
 
 function MainNav() {
+  const ctx = useContext(AuthContext);
+
+  const userDetail = JSON.parse(ctx.user);
   return (
     <div className={MainNavStyle.MainNavContainer}>
       <div className={MainNavStyle.LogoDiv}>
@@ -16,16 +20,38 @@ function MainNav() {
       </div>
 
       <ul className={MainNavStyle.NavLinks}>
-       <Link to="/"> <li>Greeting Cards</li></Link>
-       <Link to="/"> <li>Assorted Card Sets</li></Link>
-       <Link to="/"> <li>Notebooks</li></Link>
-       <Link to="/"> <li>About</li></Link>
+        <Link to="/">
+          {" "}
+          <li>Greeting Cards</li>
+        </Link>
+        <Link to="/">
+          {" "}
+          <li>Assorted Card Sets</li>
+        </Link>
+        <Link to="/">
+          {" "}
+          <li>Notebooks</li>
+        </Link>
+        <Link to="/">
+          {" "}
+          <li>About</li>
+        </Link>
       </ul>
 
       <div className={MainNavStyle.NavIcons}>
-      <Link to="/login"> <img src={UserIcon} alt="" /></Link>
-      <Link to="/"> <img src={SearchIcon} alt="" /></Link>
-      <Link to="/"> <img src={BuyCart} alt="" /></Link>
+        <Link to="/login">
+          {" "}
+          <img src={UserIcon} alt="" />
+          {userDetail.username}
+        </Link>
+        <Link to="/">
+          {" "}
+          <img src={SearchIcon} alt="" />
+        </Link>
+        <Link to="/">
+          {" "}
+          <img src={BuyCart} alt="" />
+        </Link>
       </div>
     </div>
   );

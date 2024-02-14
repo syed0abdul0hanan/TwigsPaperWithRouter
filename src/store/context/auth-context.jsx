@@ -3,8 +3,9 @@ import React, { useCallback, useEffect, useState } from "react";
 // let logoutTime;
 const AuthContext = React.createContext({
   token: "",
+  user: null,
   isLoggedIn: false,
-  login(token, expire) {},
+  login(token, user) {},
   logout() {},
 });
 
@@ -19,6 +20,7 @@ const AuthContext = React.createContext({
 
 const receivesStoredToken = () => {
   const storedToken = localStorage.getItem("AuthToken");
+  const storedUser = localStorage.getItem("user");
   // const storedExpirationTime = localStorage.getItem("ExpirationTime");
 
   // const remainingTime = calculateRemainingTime(storedExpirationTime);
@@ -30,21 +32,26 @@ const receivesStoredToken = () => {
   // }
 
   // return { token: storedToken, expiresIn: remainingTime };
-  return { token: storedToken };
+  return { token: storedToken, user: storedUser };
 };
 export const AuthContextProvider = (props) => {
   const tokenData = receivesStoredToken();
   let initState;
+  let initUser;
   if (tokenData) {
     initState = tokenData.token;
+    initUser = tokenData.user;
   }
   const [token, setToken] = useState(initState);
+  const [user, setUser] = useState(initUser);
 
   const userIsLoggedIn = !!token;
 
   const logoutHandler = useCallback(() => {
     setToken(null);
+    setUser(null);
     localStorage.removeItem("AuthToken");
+    localStorage.removeItem("user");
     // localStorage.removeItem("ExpirationTime");
 
     // if (logoutTime) {
@@ -52,9 +59,11 @@ export const AuthContextProvider = (props) => {
     // }
   }, []);
 
-  const loginHandler = (token, expirationTime) => {
+  const loginHandler = (token, user) => {
     setToken(token);
+    setUser(user);
     localStorage.setItem("AuthToken", token);
+    localStorage.setItem("user", JSON.stringify(user));
     // localStorage.setItem("ExpirationTime", expirationTime);
     // const logoutTimer = calculateRemainingTime(expirationTime);
     // logoutTime = setTimeout(logoutHandler, logoutTimer);
@@ -68,6 +77,7 @@ export const AuthContextProvider = (props) => {
   // }, [tokenData, logoutHandler]);
 
   const contextValue = {
+    user: user,
     token: token,
     isLoggedIn: userIsLoggedIn,
     login: loginHandler,
